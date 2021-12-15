@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{msg}}</p>
+        <button type="button" @click="run()">飘</button>
+        <button type="button" @click="stop()">停</button>
+    </div>
+    <script type="text/javascript">
+        new Vue({
+            el: "#app",
+            data: {
+                msg: "晚星就像你的眼睛,杀人又放火·········",
+                ind: null, //停止定时器标识
+            },
+            methods: {
+                run() {
+                    if (this.ind) {
+                        return
+                    };
+                    this.ind = setInterval(() => {
+                        var arr = this.msg.split('');
+                        //shift 删除并返回数组的个数
+                        // push 添加最后面
+                        // 把数组的第一个元素放在后面
+                        arr.push(arr.shift());
+                        // arr.join() 把数组连接为字符串复制给msg 
+                        this.msg = arr.join('');
+                    }, 100)
+                },
+                stop() {
+                    // 清除定时器
+                    clearInterval(this.ind);
+                    //设置ind为null
+                    this.ind = null;
+                }
+            }
+
+        })
+    </script>
+</body>
+
+</html>

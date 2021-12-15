@@ -1,0 +1,12 @@
+// var backgroundip ="http://10.167.213.101:8000/"
+// var index="http://10.167.213.205:8000/"
+// var htmlurl = "http://10.167.213.114:80/"
+// var index="http://193.112.233.229:8080/"
+// var htmlurl ="http://129.204.113.15:80/"
+
+
+
+// var index = "http://127.0.0.1:8000"
+// var htmlurl = "http://10.167.213.114:80"
+// var index = "http://10.167.213.205:8000"
+// var htmlurl = "http://10.167.213.114:80"
